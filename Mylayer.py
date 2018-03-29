@@ -63,8 +63,8 @@ class MyLayer(Layer):
         return dict(list(base_config.items()) + list(config.items()))
     def get_output_shape_for(self,input_shape):
         return(input_shape[0]+65)
-
-
+    def compute_output_shape(self, input_shape):
+        return(input_shape[0]+65)
 
 
 
